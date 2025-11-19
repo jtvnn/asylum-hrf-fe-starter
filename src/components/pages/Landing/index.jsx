@@ -1,7 +1,7 @@
-// import pieChart from '../../../assets/pie-chart.png';
-// import lineGraph from '../../../assets/line-graph.png';
-// import barGraph from '../../../assets/bar-graph.png';
-// import paperStack from '../../../assets/paper-stack.jpg';
+ import pieChart from '../../../assets/pie-chart.png';
+ import lineGraph from '../../../assets/line-graph.png';
+ import barGraph from '../../../assets/bar-graph.png';
+ import paperStack from '../../../assets/paper-stack.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useDownloadData } from '../../../hooks/useDownloadData.js';
 import {decodeBase64} from '../../../utils/decodeBase64.js';
@@ -28,12 +28,19 @@ export const LandingPage = () => {
 
   const handleReadMore = () => {
     // TODO: navigate to the humanrightsfirst.org homepage
+    window.location.href = 'https://www.humanrightsfirst.org/';
   };
 
   return (
     <div className='flex-c w-[100vw] secondary-c'>
-      Landing Page
-      <div>{'Type this into Canvas: ' + decodeBase64('VGltZTJDb2RlIQ==')}</div>
+      {/*Landing Page 
+      {/* <div>{'Type this into Canvas: ' + decodeBase64('VGltZTJDb2RlIQ==')}</div> */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-10 py-12 px-6 max-w-6xl"> 
+      <img src={barGraph} alt="Bar Graph" className="w-full h-auto" />
+      <img src={lineGraph} alt="Line Graph" className="w-full h-auto" />
+      <img src={pieChart} alt="Pie Chart" className="w-full h-auto" />
+      <img src={paperStack} alt="Paper Stack" className="w-full h-auto" />
+      </section>
     </div>
   );
 };
