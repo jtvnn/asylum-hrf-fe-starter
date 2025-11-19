@@ -32,7 +32,7 @@ export const LandingPage = () => {
   };
 
   return (
-    <div className='flex-c w-[100vw] secondary-c'>
+    <div className='w-full min-h-screen bg-[#f4f4f4] flex flex-col items-center'>
       {/*Landing Page 
       {/* <div>{'Type this into Canvas: ' + decodeBase64('VGltZTJDb2RlIQ==')}</div> */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-10 py-12 px-6 max-w-6xl"> 
