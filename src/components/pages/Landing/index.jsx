@@ -74,29 +74,42 @@ export const LandingPage = () => {
       </section>
       <section className='w-full py-16'>
         <h2 className='text-center text-2xl font-semibold mb-10'>Systemic Disparity Insights</h2>
+
+        {/*<div className='text-xs opacity-40 mt-4'>{decodeBase64('VGltZTJDb2RlIQ==')}</div>*/}
+        <div className='grid grid-cols-1 md:grid-cols-3 text-center max-w-5xl mx-auto gap-10 px-6'>
+          <div>
+            <h3 className='text-3xl font-bold'>36%</h3>
+            <p className='mt-2 text-sm'>
+              By the end of the Trump administration, the average asylum office grate rate fell 36% from an average of 44 percent in fiscal year 2016 to 8
+              percent in fiscal year 2021.
+            </p>
+          </div>
+          <div>
+            <h3 className='text-3xl font-bold'>5%</h3>
+            <p className='mt-2 text-sm'>The New York asylum office grant rate dropped to 5 percent in fiscal year 2020.</p>
+          </div>
+          <div>
+            <h3 className='text-3xl font-bold'>6x Lower</h3>
+            <p className='mt-2 text-sm'>
+              Between fiscal year 2017 and 2020, the New York asylum office's average grant rate was six times lower than the San Francisco asylum office.
+            </p>
+          </div>
+        </div>
+        <div className='flex justify-center mt-8'>
+          <button
+            onClick={handleReadMore}
+            className='px-6 py-2 border border-gray-600 rounded hover:bg-gray-100 transition'>
+              Read More
+            </button>
+        </div>
+        <div className='text-center mt-6'>
+          <button
+            onClick={scrollToTop} 
+            className='text-sm underline'>
+              Back To Top ↑
+            </button>
+        </div>
       </section>
-      {/*<div className='text-xs opacity-40 mt-4'>{decodeBase64('VGltZTJDb2RlIQ==')}</div>*/}
-      <div className='grid grid-cols-1 md:grid-cols-3 text-center max-w-5xl mx-auto gap-10 px-6'>
-        <div>
-          <h3 className='text-3xl font-bold'>36%</h3>
-          <p className='mt-2 text-sm'>
-            By the end of the Trump administration, the average asylum office grate rate fell 36% from an average of 44 percent in fiscal year 2016 to 8 percent
-            in fiscal year 2021.
-          </p>
-        </div>
-        <div>
-          <h3 className='text-3xl font-bold'>5%</h3>
-          <p className='mt-2 text-sm'>
-            The New York asylum office grant rate dropped to 5 percent in fiscal year 2020.
-          </p>
-        </div>
-        <div>
-          <h3 className='text-3xl font-bold'>6x Lower</h3>
-          <p className='mt-2 text-sm'>
-            Between fiscal year 2017 and 2020, the New York asylum office's average grant rate was six times lower than the San Francisco asylum office.
-          </p>
-        </div>
-      </div>
     </div>
   );
 };
