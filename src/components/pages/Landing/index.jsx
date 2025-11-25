@@ -39,7 +39,7 @@ export const LandingPage = () => {
         <h1 className="text-3xl font-semibold">Asylum Office Grant Rate Tracker</h1>
         <p className="mt-2 text-xs max-w-3xl mx-auto">
           The Asylum Office Grant Rate Tracker provides asylum seekers, researchers, policymakers,
-          and the public an interactive tool to explore USCIS data on Sylum Office decisions
+          and the public an interactive tool to explore USCIS data on ylum Office decisions
         </p>
       </header>
       <section className="grid grid-cols-1 md:grid-cols-3 gap-10 py-12 px-6 max-w-6xl"> 
@@ -70,7 +70,17 @@ export const LandingPage = () => {
             Download the Data
         </button>
       </div>
-
+      <section className="flex flex-col md:flex-row items-center max-w-6xl gap-8 my-12 px-6">
+        <img src={paperStack} alt="Paper stack" className="w-full md:w-1/2 rounded shadow" />
+        <p className="w-full md:w-1/2 leading-relaxed text-[15px]">
+          Human Rights First has created a search tool to give you a user-friendly way to explore a
+          data set of asylum decisions between FY 2016 and May 2021 by the USCIS Asylum Office,
+          which we received through a Freedon of Information Act request. You can search for
+          information on asylum grant rates by year, nationality, and asylum office, visualize the 
+          data with charts and heat maps, and download the data set.
+        </p>
+      </section>
+      
     </div>
   );
 };
