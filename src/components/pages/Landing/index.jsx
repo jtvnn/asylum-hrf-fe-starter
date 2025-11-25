@@ -34,11 +34,18 @@ export const LandingPage = () => {
   return (
     <div className='w-full min-h-screen bg-[#f4f4f4] flex flex-col items-center'>
       {/*Landing Page 
-      {/* <div>{'Type this into Canvas: ' + decodeBase64('VGltZTJDb2RlIQ==')}</div> */}
+      <div>{'Type this into Canvas: ' + decodeBase64('VGltZTJDb2RlIQ==')}</div> */}
+      <header className="w-full bg-[#4a4a4a] text-white py-6 text-center">
+        <h1 className="text-3xl font-semibold">Asylum Office Grant Rate Tracker</h1>
+        <p className="mt-2 text -sm max-w-3xl mx-auto">
+          The Asylum Office Grant Rate Tracker provides asylum seekers, researchers, policymakers,
+          and the public an interactive tool to explore USCIS data on Sylum Office decisions.
+        </p>
+      </header>
       <section className="grid grid-cols-1 md:grid-cols-3 gap-10 py-12 px-6 max-w-6xl"> 
       <img src={barGraph} alt="Bar Graph" className="w-full h-auto" />
-      <img src={lineGraph} alt="Line Graph" className="w-full h-auto" />
       <img src={pieChart} alt="Pie Chart" className="w-full h-auto" />
+      <img src={lineGraph} alt="Line Graph" className="w-full h-auto" />
       <img src={paperStack} alt="Paper Stack" className="w-full h-auto" />
       </section>
     </div>
