@@ -55,8 +55,22 @@ export const LandingPage = () => {
           <img src={lineGraph} alt="Line Graph" className="h-40" />
           <p className="mt-3 font-medium">Search Grant Rates Over Time</p>
         </div>
-      <img src={paperStack} alt="Paper Stack" className="w-full h-auto" />
       </section>
+      <div className="flex gap-4 my-4">
+        <button
+          onClick={() => navigate("/data")}
+          className="px-6 py-2 border border-gray-600 rounded hover: bg-gray-100 transition"
+          >
+            View the Data
+        </button>
+        <button
+          onClick={downloadCSV}
+          className="px-6 py-2 border border-gray-600 rounded hover: bg-gray-100 transition"
+          >
+            Download the Data
+        </button>
+      </div>
+
     </div>
   );
 };
