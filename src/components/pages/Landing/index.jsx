@@ -35,7 +35,7 @@ export const LandingPage = () => {
     <div className='w-full min-h-screen bg-[#f4f4f4] flex flex-col items-center'>
       {/*Landing Page 
       <div>{'Type this into Canvas: ' + decodeBase64('VGltZTJDb2RlIQ==')}</div> */}
-      <header className="w-full bg-[#0e07079d] text-white py-6 text-center">
+      <header className="w-full bg-[#2b1313a6] text-white py-6 text-center">
         <h1 className="text-3xl font-semibold">Asylum Office Grant Rate Tracker</h1>
         <p className="mt-2 text-xs max-w-3xl mx-auto">
           The Asylum Office Grant Rate Tracker provides asylum seekers, researchers, policymakers,
@@ -47,12 +47,14 @@ export const LandingPage = () => {
           <img src={barGraph} alt="Bar Graph" className="h-40" />
           <p className="mt-3 font-medium">Search Grant Rates By Office</p>
         </div>
-      
         <div className="flex flex-col items-center">
           <img src={pieChart} alt="Pie Chart" className="h-40" />
           <p className="mt-3 font-medium">Search Grant Rates By Nationality</p>
         </div>
-      <img src={lineGraph} alt="Line Graph" className="w-full h-full" />
+        <div className="flex flex-col items-center">
+          <img src={lineGraph} alt="Line Graph" className="h-40" />
+          <p className="mt-3 font-medium">Search Grant Rates Over Time</p>
+        </div>
       <img src={paperStack} alt="Paper Stack" className="w-full h-auto" />
       </section>
     </div>
