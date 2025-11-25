@@ -48,8 +48,10 @@ export const LandingPage = () => {
           <p className="mt-3 font-medium">Search Grant Rates By Office</p>
         </div>
       
-
-      <img src={pieChart} alt="Pie Chart" className="w-full h-full" />
+        <div className="flex flex-col items-center">
+          <img src={pieChart} alt="Pie Chart" className="h-40" />
+          <p className="mt-3 font-medium">Search Grant Rates By Nationality</p>
+        </div>
       <img src={lineGraph} alt="Line Graph" className="w-full h-full" />
       <img src={paperStack} alt="Paper Stack" className="w-full h-auto" />
       </section>
