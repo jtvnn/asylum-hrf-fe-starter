@@ -31,17 +31,18 @@ const useAppContextProvider = () => {
   useLocalStorage({ graphData, setGraphData });
 
   // API Call
+  // gets fiscal-year summary
   const getFiscalData = async () => {
     // TODO: Replace this with functionality to retrieve the data from the fiscalSummary endpoint
     const { data } = await axios.get(`${API_BASE_URL}/fiscalSummary`);
     console.log('Fiscal Data: ', data);
     return data;
   };
-
+  // get citizenship breakdown
   const getCitizenshipResults = async () => {
     // TODO: Replace this with functionality to retrieve the data from the citizenshipSummary endpoint
-    const citizenshipRes = testData.citizenshipResults;
-    return citizenshipRes;
+    const { data } = await axios.get(`${API_BASE_URL}/citizenshipSummary`);
+    return data;
   };
 
   const updateQuery = async () => {
