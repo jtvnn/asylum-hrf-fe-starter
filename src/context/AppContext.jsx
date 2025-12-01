@@ -14,16 +14,28 @@ const API_BASE_URL = 'https://asylum-be.onrender.com';
  * - Store the data
  * - Populate the graphs with the stored data
  */
+
+// custom hook to provide context values
 const useAppContextProvider = () => {
-  const [graphData, setGraphData] = useState(testData);
-  const [isDataLoading, setIsDataLoading] = useState(false);
+  const initialData = {
+    yearResults: [],
+    citizenshipResults: [],
+  }
+
+  // holds graph data from backend endpoints
+  const [graphData, setGraphData] = useState(initialData);
+
+  // controls data-loading lifecycle
+  const [isDataLoading, setIsDataLoading] = useState(true);
 
   useLocalStorage({ graphData, setGraphData });
 
-  const getFiscalData = () => {
+  // API Call
+  const getFiscalData = async () => {
     // TODO: Replace this with functionality to retrieve the data from the fiscalSummary endpoint
-    const fiscalDataRes = testData;
-    return fiscalDataRes;
+    const { data } = await axios.get(`${API_BASE_URL}/fiscalSummary`);
+    console.log('Fiscal Data: ', data);
+    return data;
   };
 
   const getCitizenshipResults = async () => {
