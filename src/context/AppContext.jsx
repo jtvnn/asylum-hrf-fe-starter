@@ -3,7 +3,10 @@ import axios from 'axios';
 import testData from '../data/test_data.json';
 import { useLocalStorage } from '../hooks/useLocalStorage.js';
 
+// allows data to be shared across components
 const AppContext = createContext({});
+
+const API_BASE_URL = 'https://asylum-be.onrender.com';
 
 /**
  * TODO: Ticket 2:
